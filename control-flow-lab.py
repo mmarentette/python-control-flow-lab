@@ -150,7 +150,7 @@ for term in range(50):
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
 
-month = input("Enter the month of the year (Jan - Dec): ")
+month = input("Enter the month of the year using only the first three characters (Jan - Dec): ").capitalize()
 day = int(input("Enter the day of the month: "))
 season = ""
 
@@ -175,7 +175,7 @@ elif month in ("Oct", "Nov", "Dec"):
     else:
         season = "Fall"
 else:
-    print("Please enter a valid month")
+    print("You did not enter a valid month or day")
 
 if season:
     print(f"{month} {day} is in {season}")
