@@ -13,12 +13,15 @@
 
 letter = input("Please enter a letter from the alphabet (a-z or A-Z): ").lower()
 
-if letter in 'aeiou':
-    print(f"The letter {letter} is a vowel")
-elif letter in 'bcdfghjklmnpqrstvwxyz':
-    print(f"The letter {letter} is a consonant")
+if len(letter) != 1:
+    print("Exactly one letter must be entered")
+elif letter.isalpha():
+    if letter in 'aeiou':
+        print(f"The letter {letter} is a vowel")
+    else:
+        print(f"The letter {letter} is a consonant") 
 else:
-    print("You did not enter valid letter from the alphabet")
+    print("You did not enter a letter")
 
 
 # exercise-02 Length of Phrase
@@ -33,7 +36,7 @@ else:
 phrase = ''
 
 while phrase != 'quit':
-    phrase = input("Please enter a word or phrase: ")
+    phrase = input("Please enter a word or phrase: ").lower()
     if phrase != 'quit':
         print(f"What you entered is {len(phrase)} characters long")
 
