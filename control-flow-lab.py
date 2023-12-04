@@ -115,18 +115,17 @@ print(f"A triangle with sides of {a}, {b} & {c} is a {triangle_type} triangle")
 # Use a while loop with a looping variable, or look into Python ranges, e.g.:
 #   for n in range(50):
 
-for term in range(0, 2):
-   print(f"term: {term} / number: {term}")
- 
-sum = 0
 penultimate_num = 0
 last_num = 1
 
-for term in range(2, 50):
-    sum = penultimate_num + last_num
-    print(f"term: {term} / number: {sum}")
-    penultimate_num = last_num
-    last_num = sum  
+for term in range(50):
+    if term < 2:
+        print(f"term: {term} / number: {term}")
+    else:
+        sum = penultimate_num + last_num
+        print(f"term: {term} / number: {sum}")
+        penultimate_num = last_num
+        last_num = sum  
 
 
 # exercise-06 What's the Season?
